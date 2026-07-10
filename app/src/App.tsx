@@ -1,3 +1,4 @@
+import { GameBoard, extractBeliefs } from "./Game";
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 
@@ -171,6 +172,7 @@ export default function App() {
                   </div>
                 ))}
               </div>
+              <GameBoard beliefs={extractBeliefs(snap.results)} color={lane.color} />
               <ActivityFeed
                 entry={(lane.key === "naive" ? data.actNaive : data.actSmart)[String(snap.i)]}
                 event={snap.event}

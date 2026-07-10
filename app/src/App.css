@@ -59,3 +59,12 @@ h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.5px; }
 
 .final { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
 .final-pre { background: #060a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; overflow: auto; max-height: 480px; margin: 0; font-size: 11px; line-height: 1.35; color: #b7c6e4; }
+
+.board { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+.board-row { display: flex; gap: 14px; align-items: flex-start; }
+.board-canvas { border-radius: 8px; border: 1px solid var(--border); background: #060a14; flex: none; }
+.board-hud { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: #93a4c4; }
+.board-hud b { font-weight: 600; }
+.board-hud .ok { color: #21C19A; }
+.board-hud .bad { color: #ff5c5c; }
+.board-score { margin-top: 8px; color: var(--text); }
