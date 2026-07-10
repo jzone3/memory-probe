@@ -26,20 +26,20 @@ h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.5px; }
 .chart-wrap { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px 8px; margin-bottom: 18px; }
 .chart { width: 100%; cursor: crosshair; }
 
-.lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
-.lane { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
-.lane-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; }
+.lanes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px; margin-bottom: 18px; }
+.lane { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; min-width: 0; }
+.lane-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 8px; flex-wrap: wrap; min-height: 60px; align-content: flex-start; }
 .lane-name { font-weight: 600; font-size: 15px; }
 .lane-stats { display: flex; gap: 12px; font-size: 12px; color: var(--dim); }
 
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-.card { position: relative; background: #0d1424; border: 1px solid var(--border); border-radius: 10px; padding: 10px 10px 26px; min-height: 92px; cursor: pointer; overflow: hidden; transition: border-color .2s; }
+.card { position: relative; background: #0d1424; border: 1px solid var(--border); border-radius: 10px; padding: 10px 10px 26px; height: 112px; cursor: pointer; overflow: hidden; transition: border-color .2s; }
 .card:hover { border-color: var(--blue); }
 .card.forgotten { border-color: #ff5c5c33; }
 .card.sharp { border-color: #21c19a33; }
-.card-inner { transition: filter .4s, opacity .4s; }
+.card-inner { transition: filter .4s, opacity .4s; height: 100%; overflow: hidden; }
 .card-label { font-size: 12px; font-weight: 600; margin-bottom: 4px; }
-.card-truth { font-size: 11px; color: #93a4c4; line-height: 1.35; }
+.card-truth { font-size: 11px; color: #93a4c4; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
 .card-score { position: absolute; bottom: 7px; left: 10px; font-size: 11px; font-weight: 600; }
 
 .probe { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
@@ -48,14 +48,14 @@ h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.5px; }
 .probe-a { border: 1px solid; border-radius: 10px; padding: 10px 12px; background: #0d1424; }
 .probe-a-head { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
 
-.activity { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+.activity { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; height: 230px; overflow: hidden; }
 .act { display: flex; gap: 8px; align-items: baseline; padding: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .act-kind { width: 16px; text-align: center; flex: none; }
 .act-kind.write { color: #21C19A; }
 .act-kind.read { color: #3969CA; }
 .act-kind.run { color: #e8b93e; }
 .act-detail { overflow: hidden; text-overflow: ellipsis; }
-.compaction-note { white-space: pre-wrap; background: #141a2e; border: 1px solid #e8b93e33; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; color: #cbb26a; max-height: 120px; overflow: auto; }
+.compaction-note { white-space: pre-wrap; background: #141a2e; border: 1px solid #e8b93e33; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; color: #cbb26a; height: 96px; overflow: auto; }
 
 .final { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
 .final-pre { background: #060a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; overflow: auto; max-height: 480px; margin: 0; font-size: 11px; line-height: 1.35; color: #b7c6e4; }
