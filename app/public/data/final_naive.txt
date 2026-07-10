@@ -1,0 +1,24 @@
+$ python -m unittest discover -s tests -v
+test_initialization (test_obstacles.TestObstacles) ... ok
+test_add_and_get_power_ups (test_power_ups.TestPowerUps) ... ok
+test_clear_power_ups (test_power_ups.TestPowerUps) ... ok
+test_initialization (test_power_ups.TestPowerUps) ... ok
+test_add_and_get_powerups (test_powerups.TestPowerUps) ... ok
+test_clear_powerups (test_powerups.TestPowerUps) ... ok
+test_initialization (test_powerups.TestPowerUps) ... ok
+test_render_and_clear_methods (test_render.TestRenderer) ... ok
+test_add_and_get_moves (test_replay.TestReplay) ... ok
+test_clear_moves (test_replay.TestReplay) ... ok
+test_initialization (test_replay.TestReplay) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.001s
+
+OK
+Rendering game state...
+Clearing screen...
+
+$ timeout 5 python cli.py
+  File "/home/ubuntu/repos/memory-probe/ws/naive/cli.py", line 2, in <module>
+    from snakelib.game_engine import GameEngine
+ModuleNotFoundError: No module named 'snakelib.game_engine'

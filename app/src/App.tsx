@@ -7,6 +7,8 @@ type Snap = {
   results: Record<string, FactResult>; mean: number;
 };
 type Fact = { id: string; label: string; question: string; truth: string };
+type Act = { kind: string; text: string; detail: string };
+type Activity = Record<string, { activity: Act[]; summary?: string }>;
 
 const LANES = [
   { key: "naive", name: "Naive compaction", sub: "generic summarize-and-resume", color: "#ff5c5c" },
@@ -14,15 +16,24 @@ const LANES = [
 ] as const;
 
 function useData() {
-  const [data, setData] = useState<{ facts: Fact[]; naive: Snap[]; smart: Snap[] } | null>(null);
+  const [data, setData] = useState<{
+    facts: Fact[]; naive: Snap[]; smart: Snap[];
+    actNaive: Activity; actSmart: Activity;
+  } | null>(null);
+  const [finals, setFinals] = useState<{ naive: string; smart: string } | null>(null);
   useEffect(() => {
     Promise.all(
-      ["data/facts.json", "data/results_naive.json", "data/results_smart.json"].map((u) =>
+      ["data/facts.json", "data/results_naive.json", "data/results_smart.json",
+       "data/activity_naive.json", "data/activity_smart.json"].map((u) =>
         fetch(u).then((r) => r.json())
       )
-    ).then(([facts, naive, smart]) => setData({ facts, naive, smart }));
+    ).then(([facts, naive, smart, actNaive, actSmart]) =>
+      setData({ facts, naive, smart, actNaive, actSmart }));
+    Promise.all(["data/final_naive.txt", "data/final_smart.txt"].map((u) =>
+      fetch(u).then((r) => r.text())
+    )).then(([n, s]) => setFinals({ naive: n, smart: s }));
   }, []);
-  return data;
+  return data && finals ? { ...data, finals } : null;
 }
 
 function snapAt(snaps: Snap[], frac: number): Snap {
@@ -92,6 +103,26 @@ function Chart({ naive, smart, frac, onScrub }: {
   );
 }
 
+function ActivityFeed({ entry, event }: { entry?: { activity: Act[]; summary?: string }; event: string }) {
+  const icons: Record<string, string> = { write: "✎", read: "⤓", run: "❯", tool: "⚙" };
+  return (
+    <div className="activity">
+      <div className="section-title">AGENT ACTIVITY <span className="dim">(real tool calls at this moment)</span></div>
+      {event === "post_compaction" && entry?.summary != null && (
+        <div className="compaction-note mono">⟡ context compacted — resumed from summary:{"\n"}{entry.summary.slice(0, 400)}…</div>
+      )}
+      {(entry?.activity ?? []).map((a, i) => (
+        <div className="act mono" key={i}>
+          <span className={"act-kind " + a.kind}>{icons[a.kind] ?? "⚙"}</span>
+          <span>{a.text}</span>
+          {a.detail && <span className="dim act-detail"> — {a.detail}</span>}
+        </div>
+      ))}
+      {!entry?.activity?.length && event !== "post_compaction" && <div className="dim mono">…</div>}
+    </div>
+  );
+}
+
 export default function App() {
   const data = useData();
   const [frac, setFrac] = useState(1);
@@ -140,6 +171,16 @@ export default function App() {
                   </div>
                 ))}
               </div>
+              <ActivityFeed
+                entry={(lane.key === "naive" ? data.actNaive : data.actSmart)[String(snap.i)]}
+                event={snap.event}
+              />
+              {frac >= 0.995 && (
+                <div className="final">
+                  <div className="section-title">END RESULT <span className="dim">(real output from this agent's workspace)</span></div>
+                  <pre className="mono final-pre">{data.finals[lane.key]}</pre>
+                </div>
+              )}
             </div>
           );
         })}

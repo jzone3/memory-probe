@@ -47,3 +47,15 @@ h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.5px; }
 .probe-answers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .probe-a { border: 1px solid; border-radius: 10px; padding: 10px 12px; background: #0d1424; }
 .probe-a-head { font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+
+.activity { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+.act { display: flex; gap: 8px; align-items: baseline; padding: 2px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.act-kind { width: 16px; text-align: center; flex: none; }
+.act-kind.write { color: #21C19A; }
+.act-kind.read { color: #3969CA; }
+.act-kind.run { color: #e8b93e; }
+.act-detail { overflow: hidden; text-overflow: ellipsis; }
+.compaction-note { white-space: pre-wrap; background: #141a2e; border: 1px solid #e8b93e33; border-radius: 8px; padding: 8px 10px; margin-bottom: 8px; color: #cbb26a; max-height: 120px; overflow: auto; }
+
+.final { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 10px; }
+.final-pre { background: #060a14; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; overflow: auto; max-height: 480px; margin: 0; font-size: 11px; line-height: 1.35; color: #b7c6e4; }
