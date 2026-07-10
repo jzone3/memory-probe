@@ -12,12 +12,15 @@ def label(tc, next_tool_msg):
     except Exception:  # noqa: BLE001
         args = {}
     out = (next_tool_msg or "")[:160].replace("\n", " ")
-    if fn == "write_file":
-        return {"kind": "write", "text": f"wrote {args.get('path')}", "detail": out}
-    if fn == "read_file":
-        return {"kind": "read", "text": f"read {args.get('path')}", "detail": ""}
-    if fn == "run_cmd":
-        return {"kind": "run", "text": f"$ {args.get('cmd', '')[:80]}", "detail": out}
+    if fn in ("write_file", "write"):
+        path = args.get("path") or args.get("file_path")
+        return {"kind": "write", "text": f"wrote {path}", "detail": out}
+    if fn in ("read_file", "read"):
+        path = args.get("path") or args.get("file_path")
+        return {"kind": "read", "text": f"read {path}", "detail": ""}
+    if fn in ("run_cmd", "exec"):
+        cmd = args.get("cmd") or args.get("command") or ""
+        return {"kind": "run", "text": f"$ {cmd[:80]}", "detail": out}
     return {"kind": "tool", "text": fn, "detail": out}
 
 

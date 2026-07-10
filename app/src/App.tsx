@@ -13,7 +13,7 @@ type Activity = Record<string, { activity: Act[]; summary?: string }>;
 
 const LANES = [
   { key: "naive", name: "Naive compaction", sub: "generic summarize-and-resume", color: "#ff5c5c" },
-  { key: "smart", name: "Self-compaction", sub: "trained working-state summary (SWE-1.7 style)", color: "#21C19A" },
+  { key: "smart", name: "SWE-1.7 self-compaction", sub: "real Devin CLI run · trained compaction", color: "#21C19A" },
 ] as const;
 
 function useData() {
@@ -142,7 +142,7 @@ export default function App() {
       <header>
         <div>
           <h1>Memory Probe</h1>
-          <div className="dim">What does the agent still know? · same task, same model, same context cap — only the compaction differs</div>
+          <div className="dim">What does the agent still know? · same task, frozen-context probes — naive compaction vs SWE-1.7's trained self-compaction (real Devin CLI run)</div>
         </div>
         <button className="play" onClick={() => setPlaying(!playing)}>{playing ? "❚❚ pause" : "▶ replay task"}</button>
       </header>
