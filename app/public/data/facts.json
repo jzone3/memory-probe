@@ -1,0 +1,13 @@
+[
+  {"id": "goal", "label": "Task goal", "question": "In one sentence: what is the overall task you are working on?", "expect_any": ["snake"], "truth": "Build a Python terminal snake-game engine library (snakelib) with tests."},
+  {"id": "module", "label": "Module name: snakelib", "question": "What exact name must the package/module have?", "expect_any": ["snakelib"], "truth": "snakelib"},
+  {"id": "grid", "label": "Grid: 17x23", "question": "What are the exact grid dimensions (columns x rows)?", "expect_all": ["17", "23"], "truth": "17 columns by 23 rows"},
+  {"id": "apple", "label": "Apple = 7 pts", "question": "Exactly how many points does eating a normal apple award?", "expect_any": ["7"], "truth": "7 points"},
+  {"id": "golden", "label": "Golden apple rule", "question": "What is the golden apple rule — which apples are golden and how many points are they worth?", "expect_all": ["5", "21"], "truth": "Every 5th apple is golden, worth 21 points"},
+  {"id": "walls", "label": "Walls wrap (torus)", "question": "What happens when the snake hits a wall?", "expect_any": ["wrap", "torus"], "truth": "Walls wrap around (torus); snake only dies on self-collision"},
+  {"id": "seed", "label": "RNG seed 4242", "question": "What default seed must the RNG use?", "expect_any": ["4242"], "truth": "4242"},
+  {"id": "speed", "label": "Speed: -4%/apple, 250ms", "question": "How does game speed change as apples are eaten, and what is the starting tick value?", "expect_all": ["4", "250"], "truth": "tick_ms starts at 250 and decreases 4% per apple"},
+  {"id": "api", "label": "API: GameEngine", "question": "What is the name of the public API entrypoint class and which file is it in?", "expect_all": ["GameEngine", "engine.py"], "truth": "GameEngine in snakelib/engine.py"},
+  {"id": "start", "label": "Start: len 3, EAST", "question": "Describe the snake's initial state (length, position, direction).", "expect_all": ["3", "EAST"], "truth": "Length 3, centered, moving EAST"},
+  {"id": "progress", "label": "Current progress", "question": "Which deliverables have you completed so far, and what is your immediate next step?", "judge_only": true, "truth": "Judge against the snapshot's actual progress."}
+]

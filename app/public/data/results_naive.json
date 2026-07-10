@@ -1,0 +1,1370 @@
+[
+ {
+  "i": 0,
+  "event": "turn",
+  "t": 24.7,
+  "tokens": 3084,
+  "compactions": 0,
+  "results": {
+   "goal": {
+    "answer": "I am building a Python terminal snake-game engine library named `snakelib`, implementing all game rules and features as specified, with accompanying tests and a renderer.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "module": {
+    "answer": "The package/module must be named exactly `snakelib`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid is exactly 17 columns by 23 rows.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "Every 5th apple eaten is a golden apple and it awards 21 points instead of 7.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "walls": {
+    "answer": "The snake wraps around the wall edges due to torus topology; it never dies from hitting a wall, only on self-collision.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The RNG must use the default seed 4242.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "The game speed increases by 4% per apple eaten, meaning the tick duration decreases by 4% each time; the starting tick value is 250 milliseconds.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named `GameEngine` and it is in the file `snakelib/engine.py`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake starts with length 3, centered in the grid, moving EAST. The initial snake coordinates are the three cells centered horizontally at the middle row, with the head at the middle cell.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "I have completed writing `snakelib/rng.py`, `snakelib/engine.py` with the `GameEngine` class, and `tests/test_engine.py` with tests covering initial state, wrap-around, self-collision, apple points, and speedup. My immediate next step is to run pytest on the engine tests, fix any failing tests, and iterate until all pass before moving to the next deliverable.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 100
+ },
+ {
+  "i": 3,
+  "event": "turn",
+  "t": 29.4,
+  "tokens": 3905,
+  "compactions": 0,
+  "results": {
+   "goal": {
+    "answer": "The overall task is to build a Python terminal snake-game engine as a library named `snakelib` with strict rules including wrap-around walls, scoring, speed increase, seeded RNG, a rendering module, extensive tests, and later phase 2 features.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "module": {
+    "answer": "The package/module must be named exactly `snakelib`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid is exactly 17 columns by 23 rows.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "Every 5th apple eaten is a golden apple worth 21 points instead of 7.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "walls": {
+    "answer": "When the snake hits a wall (grid boundary), it wraps around to the opposite side of the grid (torus topology); the snake never dies on walls.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The RNG must use the default seed 4242.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "The game speed increases by 4% per apple eaten, meaning the tick_ms reduces by 4% each apple, starting at 250 ms.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named `GameEngine` and it is in the file `snakelib/engine.py`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake starts with length 3, centered at the middle of the 17x23 grid, positioned horizontally with tail two cells left of center and head at center, moving EAST.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "I have completed `snakelib/rng.py`, `snakelib/engine.py`, and `tests/test_engine.py`. The immediate next step is fixing the `step()` implementation in `snakelib/engine.py` to correctly handle wrap-around movement, resolving the failed wrap-around test.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 99
+ },
+ {
+  "i": 5,
+  "event": "pre_compaction",
+  "t": 30.2,
+  "tokens": 4891,
+  "compactions": 0,
+  "results": {
+   "goal": {
+    "answer": "I am building a Python terminal snake game engine named `snakelib` as a library with tests, implementing specified rules and constraints step by step.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "module": {
+    "answer": "The package/module must be named exactly `snakelib`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid is exactly 17 columns by 23 rows.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "Every 5th apple eaten is a golden apple worth 21 points instead of 7.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, it wraps around to the opposite side of the grid (torus topology), so it never dies from wall collisions.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The RNG must use the default seed 4242 as specified in the hard constraints.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "The game speed increases by 4% per apple eaten by decreasing tick_ms by 4% each time; the starting tick_ms value is 250.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named `GameEngine` and it is in the file `snakelib/engine.py`.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake starts with length 3, positioned centered horizontally and vertically on the 17x23 grid, moving EAST (to the right).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "I have completed `snakelib/rng.py`, `snakelib/engine.py`, and `tests/test_engine.py`. The next immediate step is to fix the wrap-around bug in `snakelib/engine.py` so that the snake correctly wraps at edges and re-run the `tests/test_engine.py`.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 99
+ },
+ {
+  "i": 6,
+  "event": "post_compaction",
+  "t": 32.3,
+  "tokens": 173,
+  "compactions": 1,
+  "results": {
+   "goal": {
+    "answer": "I am working on developing and debugging the snakelib package's GameEngine module, specifically fixing the snake wrap-around logic and ensuring the engine tests pass.",
+    "string": 100,
+    "judge": 40,
+    "score": 70
+   },
+   "module": {
+    "answer": "The package must be named `snakelib` and contain the `RNG` and `GameEngine` modules.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The exact grid dimensions are not explicitly stated in the current memory. The size is likely defined somewhere in the GameEngine module but is not recalled here.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 100 points.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule states that golden apples appear randomly and are worth more points than regular apples; typically, golden apples are special and grant extra points (often 5 or more), but the exact number of points was not specified in the prior context.",
+    "string": 50,
+    "judge": 10,
+    "score": 30
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the wrap-around logic should move the snake's head to the opposite side of the board, but currently it does not update the head position correctly after wrapping.",
+    "string": 100,
+    "judge": 70,
+    "score": 85
+   },
+   "seed": {
+    "answer": "The default seed for the RNG must be 654321.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases as apples are eaten by decreasing the tick interval, making the game run faster. The starting tick value is set at 100 milliseconds per tick.",
+    "string": 0,
+    "judge": 50,
+    "score": 25
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is located in the engine.py file.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake's initial state typically includes a certain length (often around three units), positioned near the center of the game grid, and moving in an initial direction such as right.",
+    "string": 0,
+    "judge": 85,
+    "score": 42
+   },
+   "progress": {
+    "answer": "I have completed the snakelib package with RNG and GameEngine modules, initial tests in tests/test_engine.py, fixed import issues, and identified a bug in the snake wrap-around logic. My immediate next step is to correct the wrap-around logic in engine.py so the snake's head position updates correctly after wrapping.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 50
+ },
+ {
+  "i": 9,
+  "event": "turn",
+  "t": 47.6,
+  "tokens": 3316,
+  "compactions": 1,
+  "results": {
+   "goal": {
+    "answer": "Fix the snake wrap-around logic failing test by correcting the test snake positions and verifying the GameEngine step method handles wrap-around correctly.",
+    "string": 100,
+    "judge": 20,
+    "score": 60
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\" and the module providing the game engine is \"engine\" within that package.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid dimensions are 17 columns (width) by 23 rows (height).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 7 points, as per the POINTS_APPLE constant in GameEngine.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "Every 5th apple eaten is golden, awarding 21 points instead of the regular 7.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, its head position wraps around to the opposite side of the grid using modulo arithmetic, enabling wrap-around movement instead of dying.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The default seed that the RNG must use is 4242, as specified in the GameEngine __init__ method.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "The game speed increases (tick_ms decreases) by 4% each time an apple is eaten, starting from an initial tick value of 250 milliseconds.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is in the file snakelib/engine.py.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The initial snake length is 3, positioned horizontally centered in the grid at y = HEIGHT // 2, starting at x = mid_x - 2 to mid_x, with the head at (mid_x, mid_y), and it is moving EAST.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "I have completed the implementation of the snakelib package with RNG and GameEngine modules, initial tests, debugging wrap-around logic, and identified the test issue with duplicate snake head positions. The immediate next step is to rerun the tests with the corrected wrap-around test snake configurations.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 95
+ },
+ {
+  "i": 12,
+  "event": "turn",
+  "t": 57.8,
+  "tokens": 4686,
+  "compactions": 1,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation of the snakelib package, including its game engine and required modules, along with corresponding tests, CLI, and documentation files.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "module": {
+    "answer": "The package/module must be named \"snakelib\".",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid dimensions are 17 columns (width) by 23 rows (height).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "The golden apple appears every 5 apples eaten (frequency 5), and is worth 21 points instead of the normal apple's 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "walls": {
+    "answer": "The snake never hits a wall because the position wraps around the grid edges using modular arithmetic in the _wrap method; collision only occurs if the snake runs into itself.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The default RNG seed is 4242.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "Game speed increases by speeding up the tick time by 4% each apple eaten, with a starting tick value of 250 milliseconds.",
+    "string": 100,
+    "judge": 80,
+    "score": 90
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, located in the file snakelib/engine.py.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake initially has length 3, positioned horizontally centered in the grid starting two cells left of the center to the center cell, and is moving EAST.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "So far, I have completed the snakelib package with RNG, GameEngine, and added placeholder modules for render.py, obstacles.py, replay.py, and powerups.py. The immediate next step is to implement the test files: tests/test_render.py, tests/test_obstacles.py, tests/test_replay.py, and tests/test_powerups.py.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 98
+ },
+ {
+  "i": 13,
+  "event": "pre_compaction",
+  "t": 57.8,
+  "tokens": 4686,
+  "compactions": 1,
+  "results": {
+   "goal": {
+    "answer": "I am building and testing the snakelib package and its associated modules, including engine, RNG, rendering, obstacles, replay, and power-ups, along with their tests and CLI and README.",
+    "string": 100,
+    "judge": 85,
+    "score": 92
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\" and the modules accordingly, e.g., snakelib.engine, snakelib.render, snakelib.obstacles, snakelib.replay, snakelib.powerups.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The grid dimensions are 17 columns (width) by 23 rows (height).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "golden": {
+    "answer": "Golden apples appear every 5th apple eaten (GOLDEN_APPLE_FREQUENCY = 5), and each golden apple is worth 21 points. Normal apples are worth 7 points.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "walls": {
+    "answer": "When the snake moves beyond the grid border, the head position wraps around to the opposite side using modulo arithmetic; the snake does not die from hitting walls because there are no solid walls, only wrap-around.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The default seed for the RNG in GameEngine is 4242.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "speed": {
+    "answer": "The game speed increases by 4% (tick_ms decreases by 4%) each time an apple is eaten, with a minimum tick_ms of 1. The starting tick_ms value is 250.",
+    "string": 100,
+    "judge": 90,
+    "score": 95
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is in the file snakelib/engine.py.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "start": {
+    "answer": "The snake initially has length 3, positioned horizontally near the grid center with coordinates [(mid_x-2, mid_y), (mid_x-1, mid_y), (mid_x, mid_y)] and is moving east.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "progress": {
+    "answer": "I have completed the snakelib/engine.py module, fixed and tested it, and just created initial placeholder implementations for snakelib/render.py, obstacles.py, replay.py, and powerups.py. The immediate next step is to implement their corresponding tests in tests/test_render.py, test_obstacles.py, test_replay.py, and test_powerups.py.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 99
+ },
+ {
+  "i": 14,
+  "event": "post_compaction",
+  "t": 59.1,
+  "tokens": 201,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am developing and completing all components\u2014including modules, tests, CLI, and documentation\u2014for a snake game project, progressing from core engine and RNG to rendering, obstacles, replay, power-ups, and related tests.",
+    "string": 100,
+    "judge": 40,
+    "score": 70
+   },
+   "module": {
+    "answer": "The package/module must be named \"snakelib\".",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The exact grid dimensions are 40 columns by 30 rows.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 1 point.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule states that golden apples are special apples in the snake game that appear occasionally and are worth more points than regular apples; specifically, each golden apple is worth 5 points.",
+    "string": 50,
+    "judge": 0,
+    "score": 25
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game typically ends or the snake dies, as hitting a wall is a losing condition in classic snake game logic.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "seed": {
+    "answer": "The RNG must use the default seed 12345.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases (tick delay decreases) as apples are eaten. The starting tick value is 300 milliseconds.",
+    "string": 0,
+    "judge": 20,
+    "score": 10
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named GameEngine and it is located in the file snakelib/game_engine.py.",
+    "string": 100,
+    "judge": 50,
+    "score": 75
+   },
+   "start": {
+    "answer": "The snake's initial state details are not explicitly stated in the prior summary, but from context, it likely starts at a default length and position with a set direction within the GameEngine module.",
+    "string": 0,
+    "judge": 10,
+    "score": 5
+   },
+   "progress": {
+    "answer": "So far, the core GameEngine and RNG modules are implemented and debugged, test failures fixed, and placeholder skeletons for rendering, obstacles, replay, and power-ups modules have been created. The immediate next step is to implement tests for these placeholder modules.",
+    "string": null,
+    "judge": 95,
+    "score": 95
+   }
+  },
+  "mean": 35
+ },
+ {
+  "i": 15,
+  "event": "turn",
+  "t": 71.7,
+  "tokens": 1858,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation and testing of missing modules and the CLI and README for a Python snake game project.",
+    "string": 100,
+    "judge": 60,
+    "score": 80
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\" as indicated by the module imports and file paths (e.g., snakelib/game_engine.py, snakelib/obstacles.py).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The exact grid dimensions are not fixed but are settable via CLI parameters with default values of 20 (width) x 20 (height).",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "The current conversation summary and actions do not specify exactly how many points eating a normal apple awards.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "I have no information in the current conversation about the golden apple rule, which apples are golden, or how many points they are worth.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game likely ends or registers a collision, as the core GameEngine logic includes wrap-around handling but depending on game settings collisions with obstacles or boundaries may cause game over.",
+    "string": 100,
+    "judge": 10,
+    "score": 55
+   },
+   "seed": {
+    "answer": "The default seed for the RNG was not explicitly mentioned or set in the summarized prior work or subsequent steps.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "From the prior context, the game speed increases as apples are eaten by decreasing the tick delay, and the starting tick value is set to a predefined initial speed (likely a constant such as 100 or similar), though exact values are not in the current summary.",
+    "string": 0,
+    "judge": 30,
+    "score": 15
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is in the file game_engine.py.",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state is typically set up in the game engine module; it starts with a default length (often 3 segments), positioned near the center of the board, moving in the initial direction, usually right or up.",
+    "string": 50,
+    "judge": 70,
+    "score": 60
+   },
+   "progress": {
+    "answer": "I have completed test files for rendering, obstacles, replay, and power-ups modules, created the CLI entry point, and written the README documentation. The immediate next step is to run all tests to ensure everything passes.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 41
+ },
+ {
+  "i": 18,
+  "event": "turn",
+  "t": 74.5,
+  "tokens": 2250,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the missing tests, CLI entry point, and README documentation for a Python snake game project after implementing core and placeholder modules.",
+    "string": 100,
+    "judge": 40,
+    "score": 70
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\" because all implemented modules and tests reside within this package directory.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The CLI defaults the game board to 20 width (columns) and 20 height (rows) as per the argparse default arguments.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "The previous conversation did not specify how many points eating a normal apple awards.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule and details about golden apples were not mentioned or defined in prior conversation or code context, so I currently have no information on which apples are golden or how many points they are worth.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, based on the implemented wrap-around logic fixed earlier, it wraps around to the opposite side of the board rather than causing a collision or game over.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The default seed for the RNG module was not specified in the conversation so far.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases as apples are eaten by decreasing the tick delay; the starting tick value is typically set as a base delay in the GameEngine, but the exact starting tick value detail is not recalled from the current conversation context.",
+    "string": 0,
+    "judge": 50,
+    "score": 25
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine and it is in the file game_engine.py.",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state setup was involved in prior debugging related to wrap-around logic in tests, but specific details on initial length, position, or direction are not included in the current conversation memory.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "progress": {
+    "answer": "I have completed implementing test files for the placeholder modules, the CLI entry point, and the README documentation. The immediate next step is to ensure the tests are discovered and run correctly, likely by fixing the test discovery setup.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 40
+ },
+ {
+  "i": 21,
+  "event": "turn",
+  "t": 81.2,
+  "tokens": 2785,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation of the missing modules, their tests, the CLI entry point, and README documentation for a Python snake game project.",
+    "string": 100,
+    "judge": 80,
+    "score": 90
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\".",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The default grid dimensions set in the CLI entry point are 20 width (columns) by 20 height (rows).",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 1 point.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The current conversation and context do not contain any information about a golden apple rule or the scoring of apples in the snake game.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "From prior context, the snake game includes wrap-around logic, so when the snake hits a wall, it wraps around to the opposite side rather than dying or stopping.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The conversation does not specify a default seed for the RNG module in the snake game.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases (ticks reduce) as apples are eaten, starting with a tick value of 100.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine and it is in the file snakelib/game_engine.py.",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state is typically a short length starting near the center of the board, facing a default direction such as right, but the exact details depend on the GameEngine implementation done earlier.",
+    "string": 0,
+    "judge": 30,
+    "score": 15
+   },
+   "progress": {
+    "answer": "I have completed placeholder tests for obstacles, power-ups, replay, and rendering modules, as well as the CLI entry point and README documentation. The immediate next step is to implement the actual module code for replay and rendering to enable passing tests.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 41
+ },
+ {
+  "i": 24,
+  "event": "turn",
+  "t": 85.5,
+  "tokens": 3302,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation and testing of missing modules, CLI entry point, and documentation for a Python snake game project.",
+    "string": 100,
+    "judge": 85,
+    "score": 92
+   },
+   "module": {
+    "answer": "The package must be named \"snakelib\" for the modules and tests.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The default grid dimensions are 20 columns by 20 rows, as specified in the CLI entry point arguments.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "The exact number of points awarded for eating a normal apple has not been specified or implemented in the provided context so far.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The conversation does not mention the golden apple rule, which apples are golden, or how many points they are worth.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "From the prior context, the wrap-around logic in the snake game was debugged and fixed, which suggests that when the snake hits a wall, it wraps around to the opposite side rather than dying or stopping.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The specific default seed for the RNG was not mentioned or specified in the current conversation.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The memory does not include specific details on game speed changes or the starting tick value; these were not mentioned or implemented in the current task summary or code.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entry point class is GameEngine in the file snakelib/game_engine.py.",
+    "string": 100,
+    "judge": 50,
+    "score": 75
+   },
+   "start": {
+    "answer": "The prior context doesn't specify the snake's initial state, such as its length, position, or direction.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "progress": {
+    "answer": "I have completed the placeholder implementations and tests for obstacles, power-ups, replay, and rendering modules, created the CLI entry point, and added README documentation. The immediate next step is to ensure that unittest discovers these tests correctly, potentially by reviewing or adjusting test file naming or structure.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 42
+ },
+ {
+  "i": 27,
+  "event": "turn",
+  "t": 88.4,
+  "tokens": 3927,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation and testing of the missing modules, CLI, and documentation for a Python snake game project.",
+    "string": 100,
+    "judge": 70,
+    "score": 85
+   },
+   "module": {
+    "answer": "The package/module must be named \"snakelib\".",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The default grid dimensions are 20 columns by 20 rows, as set in the CLI entry point defaults (--width 20, --height 20).",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "The current conversation and code do not specify how many points eating a normal apple awards.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "I have no information about a golden apple rule, which apples are golden, or their point values in the current context or memory of this conversation.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "Based on the prior context, the snake game includes wrap-around logic, and test failures were fixed related to incorrect wrap-around setups. Therefore, when the snake hits a wall, it wraps around to the opposite side of the board rather than stopping or dying.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "seed": {
+    "answer": "The default seed for the RNG module was not specified or discussed in the current conversation.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases as apples are eaten by reducing the tick delay by 3 units per apple, with a starting tick value of 100.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is located in the file snakelib/game_engine.py.",
+    "string": 100,
+    "judge": 50,
+    "score": 75
+   },
+   "start": {
+    "answer": "The snake's initial state details were not included in the current conversation's context or files.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "progress": {
+    "answer": "I have completed the placeholder implementations of rendering, obstacles, replay, and power-ups modules, their tests, the CLI entry point, and the README documentation, with all tests passing. The immediate next step is to continue developing or integrating the remaining game functionality beyond placeholders if required.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 41
+ },
+ {
+  "i": 29,
+  "event": "pre_compaction",
+  "t": 105.3,
+  "tokens": 5063,
+  "compactions": 2,
+  "results": {
+   "goal": {
+    "answer": "I am completing the implementation of a snake game by finishing missing modules, adding their tests, providing a CLI entry point, and documentation.",
+    "string": 100,
+    "judge": 80,
+    "score": 90
+   },
+   "module": {
+    "answer": "The package/module must be named \"snakelib\" as per the earlier implemented package directory and imports.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The CLI default grid dimensions are 20 columns x 20 rows as given by the default width and height arguments in cli.py.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "The memory of this conversation does not contain any information about the points awarded for eating a normal apple.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule for the snake game or any specific scoring details about golden apples were not mentioned or implemented in the conversation history so far.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, based on typical snake game logic and the earlier mentioned wrap-around logic in tests, it likely either wraps around to the opposite side or the game ends depending on the implemented game logic in GameEngine.",
+    "string": 100,
+    "judge": 50,
+    "score": 75
+   },
+   "seed": {
+    "answer": "The default seed for the RNG has not been specified in the current conversation or prior work summary.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The current memory does not contain information about how the game speed changes as apples are eaten or the starting tick value.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named GameEngine, and it is located in the file snakelib/game_engine.py.",
+    "string": 100,
+    "judge": 50,
+    "score": 75
+   },
+   "start": {
+    "answer": "The snake's initial state was previously causing test failures due to incorrect setup around wrap-around logic, implying it starts at a defined position, direction, and length controlled in the GameEngine core, though exact values are not currently in memory.",
+    "string": 0,
+    "judge": 10,
+    "score": 5
+   },
+   "progress": {
+    "answer": "I have completed the placeholder modules for render, obstacles, replay, and powerups, their internal tests in snakelib/, the CLI entry point, and the README. My immediate next step was to implement the tests in the tests/ directory for render, obstacles, replay, and powerups, which I have just done. The next step is to run these tests to verify correctness.",
+    "string": null,
+    "judge": 95,
+    "score": 95
+   }
+  },
+  "mean": 40
+ },
+ {
+  "i": 30,
+  "event": "post_compaction",
+  "t": 107.5,
+  "tokens": 197,
+  "compactions": 3,
+  "results": {
+   "goal": {
+    "answer": "I am working on developing and testing a snake game by implementing and organizing its modules and corresponding test files correctly.",
+    "string": 100,
+    "judge": 75,
+    "score": 88
+   },
+   "module": {
+    "answer": "The package/module must have the name \"snakelib\" as it contains the core game modules including rendering, obstacles, replay, and power-ups.",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The exact grid dimensions should be 20 columns by 20 rows for the snake game.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 5 points.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule is not explicitly defined in the current memory. There is no information specifying which apples are golden or how many points they are worth.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game typically ends or the snake dies, triggering a game over scenario.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "seed": {
+    "answer": "The default seed for the RNG must be 0.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases (tick value decreases) as apples are eaten by decrementing the tick count to speed up the game. The starting tick value is set to 125 milliseconds per tick.",
+    "string": 0,
+    "judge": 50,
+    "score": 25
+   },
+   "api": {
+    "answer": "The public API entrypoint class is named GameEngine, and it is in the core module file.",
+    "string": 50,
+    "judge": 50,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state typically has a certain length (usually around 3 segments), positioned near the center of the game board, and initially moving in a default direction, commonly to the right.",
+    "string": 50,
+    "judge": 80,
+    "score": 65
+   },
+   "progress": {
+    "answer": "Completed deliverables: implemented core GameEngine and RNG modules with tests, scaffolded placeholder modules for rendering, obstacles, replay, power-ups, added tests for new modules inside snakelib, then created missing test files for those modules in separate tests directory, also added CLI and README.\n\nImmediate next step: implement actual functionality inside the placeholder modules for rendering, obstacles, replay, and power-ups.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 39
+ },
+ {
+  "i": 33,
+  "event": "turn",
+  "t": 113.0,
+  "tokens": 1649,
+  "compactions": 3,
+  "results": {
+   "goal": {
+    "answer": "I am working on completing and properly organizing unit tests for the various modules of a snake game, including moving test files to the correct directory and ensuring imports and tests run correctly.",
+    "string": 100,
+    "judge": 30,
+    "score": 65
+   },
+   "module": {
+    "answer": "The package/module name must be \"snakelib.powerups\" without the underscore, consistent with the other modules like \"snakelib.render\" and \"snakelib.obstacles\".",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "grid": {
+    "answer": "The exact grid dimensions (columns x rows) are not specified in the current conversation memory.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 1 point.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule is that the golden apples are special power-up items in the snake game, and each golden apple is worth 10 points.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game typically ends or the snake loses a life, indicating a collision with an obstacle or boundary that causes failure.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "seed": {
+    "answer": "The default seed the RNG must use is 42.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases (tick value decreases) by 10% each time an apple is eaten, starting from an initial tick value of 100.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is likely named with the module name, such as Renderer in render.py, Obstacles in obstacles.py, Replay in replay.py, and PowerUps in power_ups.py within the snakelib package.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "start": {
+    "answer": "The snake's initial state typically has a default length (usually around 3 segments), starts at a central or defined position on the game grid, and moves initially in a default direction (commonly right or up), but this was not explicitly detailed in the prior conversation.",
+    "string": 50,
+    "judge": 40,
+    "score": 45
+   },
+   "progress": {
+    "answer": "So far, I have completed implementing core GameEngine and RNG modules, placeholder modules for rendering, obstacles, replay, and power-ups, added tests inside snakelib package, and created missing test files in the tests directory. The immediate next step is to fix the import error in the test_power_ups.py test file caused by the missing snakelib.power_ups module or incorrect import path.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 24
+ },
+ {
+  "i": 36,
+  "event": "turn",
+  "t": 117.2,
+  "tokens": 2277,
+  "compactions": 3,
+  "results": {
+   "goal": {
+    "answer": "I am working on completing and correcting the test suite for the snake game, ensuring all modules including rendering, obstacles, replay, and power-ups have proper tests in the separate tests directory.",
+    "string": 100,
+    "judge": 30,
+    "score": 65
+   },
+   "module": {
+    "answer": "The exact module name must be 'powerups' without an underscore, i.e., \"snakelib.powerups\".",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "grid": {
+    "answer": "The exact grid dimensions for the snake game were not specified in the conversation so far.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards exactly 1 point.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The golden apple rule typically means that golden apples are special items in the snake game that grant extra points; usually, golden apples appear occasionally and are worth more points than regular apples, often around 5 points.",
+    "string": 50,
+    "judge": 20,
+    "score": 35
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game typically ends or the snake dies, signaling a collision event that stops gameplay.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "seed": {
+    "answer": "The default seed the RNG must use is 12345.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "Game speed increases by decreasing the tick value by 2 each time an apple is eaten, starting from an initial tick value of 100.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is \"GameEngine\" and it is in the file \"snakelib/game_engine.py\".",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state details such as length, position, and direction have not been explicitly provided or implemented in the context of this conversation so far.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "progress": {
+    "answer": "I have completed implementing core GameEngine and RNG modules, scaffolded placeholder modules for rendering, obstacles, replay, and power-ups, and moved tests for these modules into the separate tests directory. I have just fixed the power-ups test import issue by correcting the module name. My immediate next step is to re-run the tests to ensure all tests pass.",
+    "string": null,
+    "judge": 100,
+    "score": 100
+   }
+  },
+  "mean": 27
+ },
+ {
+  "i": 39,
+  "event": "end",
+  "t": 119.0,
+  "tokens": 2433,
+  "compactions": 3,
+  "results": {
+   "goal": {
+    "answer": "I am working on implementing and testing modules for a snake game, including rendering, obstacles, replay, and power-ups, ensuring their test coverage and proper organization.",
+    "string": 100,
+    "judge": 85,
+    "score": 92
+   },
+   "module": {
+    "answer": "The package name is snakelib, and the module for power-ups is named powerups (without underscore).",
+    "string": 100,
+    "judge": 100,
+    "score": 100
+   },
+   "grid": {
+    "answer": "The exact grid dimensions are 20 columns by 20 rows.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "apple": {
+    "answer": "Eating a normal apple awards 1 point.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "golden": {
+    "answer": "The conversation does not include any information about the golden apple rule, which apples are golden, or their point values.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "walls": {
+    "answer": "When the snake hits a wall, the game likely triggers a collision event that results in the game ending or the snake losing a life. The GameEngine module would detect this collision as part of the core game logic.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "seed": {
+    "answer": "The default seed for the RNG must be 42.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "speed": {
+    "answer": "The game speed increases (ticks decrease) as apples are eaten, starting from a tick value of 200 and reducing by 10 for each apple eaten, but not going below 50.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "api": {
+    "answer": "The public API entrypoint class is GameEngine, and it is in the file snakelib/gameengine.py.",
+    "string": 100,
+    "judge": 0,
+    "score": 50
+   },
+   "start": {
+    "answer": "The snake's initial state is not described in this conversation's memory; prior work focused on engine, RNG, and test scaffolding without detail on snake's length, position, or direction.",
+    "string": 0,
+    "judge": 0,
+    "score": 0
+   },
+   "progress": {
+    "answer": "I have completed implementing core GameEngine and RNG modules, scaffolded placeholder modules for rendering, obstacles, replay, and power-ups, moved tests to a separate tests directory, created missing tests for these modules, and fixed import issues in power-ups tests. The immediate next step has been to confirm all tests run successfully, which they have.",
+    "string": null,
+    "judge": 90,
+    "score": 90
+   }
+  },
+  "mean": 30
+ }
+]
